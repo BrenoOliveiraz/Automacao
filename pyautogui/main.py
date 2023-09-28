@@ -16,9 +16,7 @@ pyautogui.PAUSE = 0.3
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
-time.sleep(1)
-pyautogui.click(x=877, y=606) 
-time.sleep(3)
+pyautogui.click(x=579, y=851)
 
 # entrar no link 
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
@@ -28,22 +26,22 @@ time.sleep(3)
 
 # Passo 2: Fazer login
 # selecionar o campo de email
-pyautogui.click(x=685, y=451)
+pyautogui.click(x=852, y=373)
 # escrever o seu email
-pyautogui.write("pythonimpressionador@gmail.com")
+pyautogui.write("brenooliveiraa@gmail.com")
 pyautogui.press("tab") # passando pro próximo campo
 pyautogui.write("sua senha")
-pyautogui.click(x=955, y=638) 
+pyautogui.click(x=965, y=540) 
 time.sleep(3)
 
 # Passo 3: Importar a base de produtos pra cadastrar
 import pandas as pd
-tabela = pd.read_csv("produtos.csv")
+tabela = pd.read_csv("pyautogui/produtos.csv")
 print(tabela)
 # Passo 4: Cadastrar um produto
 for linha in tabela.index:
     # clicar no campo de código
-    pyautogui.click(x=653, y=294)
+    pyautogui.click(x=863, y=291)
     # pegar da tabela o valor do campo que a gente quer preencher
     codigo = tabela.loc[linha, "codigo"]
     # preencher o campo
